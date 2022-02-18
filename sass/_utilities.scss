@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  @media screen and (min-width: 769px) {
+    width: 750px;
+  }
+  @media screen and (min-width: 993px) {
+    width: 990px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    width: 1322px;
+  }
+
+  @media screen and (min-width: 1500px) {
+    width: 1422px;
+  }
+}
+.default-section {
+  padding: 100px 0;
+}
+.list-unstyled {
+  li {
+    list-style: none;
+  }
+}
+.d-flex {
+  display: flex !important;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
