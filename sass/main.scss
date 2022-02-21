@@ -1,6 +1,7 @@
 @import "fonts/styles.scss";
 @import "variables.scss";
 @import "utilities.scss";
+@import "buttons.scss";
 
 *,
 *::before,
@@ -420,6 +421,7 @@ progress {
 }
 
 .header {
+  position: relative;
   padding: 10px 30px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
@@ -433,8 +435,42 @@ progress {
     }
   }
 }
+.menu-toggler {
+  @media screen and (min-width: 993px) {
+    display: none;
+  }
+  .mobile-menu {
+    display: none
+  }
+  .hamburger {
+    display: inline-block;
+    transition: .3s;
+  }
+  .close {
+    display: none;
+    transition: .3s;
+    position: absolute;
+    left: 30px;
+    top: 25px;
+  }
+  &.show {
+    .mobile-menu {
+      display: block;
+    }
+    .hamburger {
+      display: none;
+    }
+    .close {
+      display: inline-block;
+    }
+  }
+}
 .navbar-nav {
   margin: 0;
+  display: none;
+  @media screen and (min-width: 993px) {
+    display: block;
+  }
   li {
     display: inline-block;
     list-style: none;
@@ -446,21 +482,156 @@ progress {
   }
 }
 
+.mobile-menu {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 15px 10px;
+  .logo-container {
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+  }
+  .navbar-nav {
+    li {
+      display: block;
+      list-style: none;
+      a {
+        color: var(--body-color);
+        text-transform: uppercase;
+        padding: 10px 15px;
+      }
+    }
+  }
+}
+
 .home-banner {
   background-image: url('../images/spacejoy-sh6Aj176NAQ-unsplash.png');
-  // background-image: url('images/Rectangle_39.png');
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   height: 60vh;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/Rectangle_39.png');
+  }
   @media screen and (min-width: 1366px) {
     height: calc(100vh - 60px);
   }
-  // @media screen and (min-width: 1920px) {
-  //   height: 871px;
+  .container {
+    height: 100%;
+  }
+  .default-event-infos {
+    position: relative;
+    top: 0;
+    bottom: 50px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 15px 0 50px 0;
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 266px;
+      @media screen and (min-width: 1366px) {
+        width: 383px;
+      }
+    }
+    .date-wrapper {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .date-range {
+      font-weight: 900;
+      font-size: 2rem;
+    }
+  }
+}
+
+/* Inspiration section */
+.inspiration-section {
+  @media screen and (min-width: 993px) {
+    text-align: center;
+  }
+  .title {
+    width: 70%;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    @media screen and (min-width: 1366px) {
+      width: 100%;
+    }
+  }
+  // .container {
+  //   width: 80%;
   // }
+  .inspiration-images {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    & > div {
+      // width: 45%;
+      img {
+        width: 100%;
+      }
+      &:first-child {
+        width: 100%;
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+      }
+    }
+    @media screen and (min-width: 1366px) {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      
+      & > div {
+        // height: 536px;
+        &:first-child {
+          grid-column: 1 / 2;
+          grid-row: 1 / 3;
+          height: 552px;
+          img {
+            height: 552px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .footer {
   background-color: #FFF264;
-  padding: 50px 0;
+  padding: 50px 0 30px 0;
+  font-size: .77rem;
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .footer-logo-container {
+      padding: 0 15px 0 0;
+      width: 16%;
+    }
+    .footer-description-container {
+      width: 84%;
+    }
+  }
+  .copyright {
+    text-align: right;
+    p {
+      margin-bottom: 0;
+    }
+  }
 }
