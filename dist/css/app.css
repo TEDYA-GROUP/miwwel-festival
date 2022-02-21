@@ -524,6 +524,9 @@ progress {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
 }
 .header .logo-container .logo, .header .logo-container img {
   height: 40px;
@@ -658,11 +661,96 @@ progress {
   font-size: 2rem;
 }
 
+/* About Festival */
+.about-event {
+  position: relative;
+}
+@media screen and (min-width: 993px) {
+  .about-event .container {
+    width: 100%;
+  }
+}
+.about-event .about-section-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 993px) {
+  .about-event .about-section-container {
+    flex-direction: row;
+  }
+}
+.about-event .about-section-container .left-side {
+  position: relative;
+  width: 100%;
+  min-height: 315px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 993px) {
+  .about-event .about-section-container .left-side {
+    width: 50%;
+  }
+}
+.about-event .about-section-container .left-side .main-image {
+  top: 0;
+  left: -86px;
+  width: 95%;
+  position: absolute;
+}
+@media screen and (min-width: 1360px) {
+  .about-event .about-section-container .left-side .main-image {
+    left: -160px;
+    top: -127px;
+  }
+}
+.about-event .about-section-container .left-side .shapes img {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+}
+.about-event .about-section-container .left-side .shapes img.red {
+  transform: rotate(30deg);
+}
+.about-event .about-section-container .left-side .shapes img.yellow {
+  bottom: 130px;
+}
+.about-event .about-section-container .right-side {
+  position: relative;
+}
+@media screen and (min-width: 993px) {
+  .about-event .about-section-container .right-side {
+    width: 50%;
+  }
+  .about-event .about-section-container .right-side > * {
+    width: 70%;
+  }
+}
+.about-event .about-section-container .right-side h2 {
+  padding: 15px 0;
+}
+.about-event .about-section-container .right-side .shapes img {
+  height: auto;
+  position: absolute;
+  bottom: -153px;
+}
+.about-event .about-section-container .right-side .shapes img.blue {
+  width: 51px;
+  right: 0;
+  bottom: -70px;
+}
+.about-event .about-section-container .right-side .shapes img.yellow {
+  width: 147px;
+  left: -78px;
+}
+
 /* stores section */
 .stores-presents {
   text-align: center;
   position: relative;
-  margin-top: 100px;
+  margin-top: 20px;
+  padding-bottom: 0px;
+  overflow-x: clip;
 }
 .stores-presents:before {
   content: "";
@@ -673,12 +761,24 @@ progress {
   top: 0px;
   left: 0;
 }
+@media screen and (min-width: 1366px) {
+  .stores-presents:before {
+    top: 40px;
+  }
+}
 .stores-presents .stores-title {
   position: absolute;
   z-index: 3;
   font-size: 2.5rem;
   line-height: 2rem;
   transform: translateY(-106px);
+}
+@media screen and (min-width: 1366px) {
+  .stores-presents .stores-title {
+    position: relative;
+    bottom: -65px;
+    font-size: 5rem;
+  }
 }
 .stores-presents .stores-title span {
   background: -webkit-linear-gradient(302deg, #000 47%, #fff 25%);
@@ -689,20 +789,100 @@ progress {
   width: 95%;
   margin: 0 auto;
 }
+@media screen and (min-width: 1366px) {
+  .stores-presents .stores-desscription {
+    width: 50%;
+    padding: 20px 0 50px 0;
+  }
+}
+.stores-presents .stores-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+.stores-presents .stores-list-container .list-group {
+  width: 50%;
+  padding: 15px 0;
+}
+@media screen and (min-width: 1360px) {
+  .stores-presents .stores-list-container .list-group {
+    width: 25%;
+  }
+}
+.stores-presents .stores-list-container .list-group .list-title {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.stores-presents .stores-list-container .list-group ul {
+  padding: 0;
+  margin: 0;
+}
+.stores-presents .stores-list-container .list-group ul li {
+  list-style: none;
+}
+.stores-presents .stores-map-container {
+  position: relative;
+}
+@media screen and (min-width: 1366px) {
+  .stores-presents .stores-map-container {
+    position: static;
+  }
+}
+.stores-presents .stores-map-container iframe {
+  width: 100% !important;
+}
+.stores-presents .stores-map-container:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  border-left: 100vw solid #fff;
+  border-bottom: 15px solid #fff;
+  border-top: 50px solid transparent;
+}
 
 .stores-background-container {
   background-color: #31B6B3;
-  padding: 10px 0 80px 0;
+  padding: 10px 0 0 0;
+}
+@media screen and (min-width: 1366px) {
+  .stores-background-container .container, .stores-background-container .stores-map-container {
+    width: 1241px;
+    margin: 0 auto;
+  }
 }
 
 /* end of stores section */
 /* Inspiration section */
+.inspiration-section {
+  position: relative;
+  padding-top: 25px;
+  max-width: 100vw;
+  overflow-x: clip;
+}
+.inspiration-section .shapes img {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.inspiration-section .shapes img.yellow {
+  width: 205px;
+  right: -28px;
+  top: -65px;
+}
+.inspiration-section .shapes img.red {
+  width: 48px;
+  left: 0;
+  top: -20px;
+}
 @media screen and (min-width: 993px) {
   .inspiration-section {
     text-align: center;
   }
 }
 .inspiration-section .title {
+  position: relative;
+  z-index: 2;
   width: 70%;
   font-size: 2rem;
   margin-bottom: 2.5rem;
