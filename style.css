@@ -1,18 +1,21 @@
 body {
   margin: 0;
   padding: 0;
-  width: 1920px;
-  height: 4493px;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
+
+/* la bar de navigation */
+
 header {
   display: flex;
   padding: 30px;
   top: 0px;
-  width: 1953px;
+  width: 1920px;
   height: 100px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
@@ -50,7 +53,6 @@ li a {
 
   color: #2f2f2f;
 }
-
 .lang {
   color: #2f2f2f;
   width: 27px;
@@ -58,11 +60,280 @@ li a {
   margin: 25px;
 }
 
+/* section avec images superposées */
+
 .image-fond {
-  top: 69px;
+  top: 0px;
+  margin-top: 0 px;
+  position: relative;
   left: 0px;
   width: 1920px;
   height: 872px;
-  background: url('images/Rectangle_39.png') 0% 0% no-repeat padding-box;
+}
+
+.image-1 {
+  position: absolute;
+
+  z-index: 1;
+}
+.image-2 {
+  position: absolute;
+  z-index: 2;
+  width: 1920px;
+}
+
+.image-3 {
+  position: absolute;
+  width: 1920px;
+  z-index: 3;
+  top: 440px;
+}
+
+.image-4 {
+  position: absolute;
+  z-index: 4;
+
+  top: 560px;
+}
+
+.image-5 {
+  position: absolute;
+  z-index: 5;
+  top: 58px;
+  left: 718px;
+
+  margin: auto;
+}
+
+.image-6 {
+  position: absolute;
+  z-index: 8;
+
+  top: 720px;
+  left: 1247px;
+  width: 24px;
+  height: 12px;
+
+  background: 0% 0% no-repeat padding-box;
   opacity: 1;
+}
+
+.image-7 {
+  z-index: 12;
+  position: absolute;
+
+  top: 750px;
+  left: 1450px;
+  width: 468px;
+  height: 467px;
+  transform: matrix(-0.52, 0.52, -0.86, 0, 0);
+
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.section2 {
+  position: relative;
+}
+
+.image-8 {
+  top: 200px;
+  left: 0px;
+  position: absolute;
+  z-index: 1;
+  width: 780px;
+  height: 680px;
+  opacity: 1;
+}
+
+.image-9 {
+  z-index: 2;
+  position: absolute;
+  top: 200px;
+  left: 163px;
+  width: 133px;
+  height: 132px;
+}
+
+.im_1 {
+  top: 800px;
+  z-index: 3;
+  position: absolute;
+  margin-left: 650px;
+  width: 128px;
+  height: 124px;
+  opacity: 1;
+}
+.im_2 {
+  margin-left: 1000px;
+}
+.image-fond p {
+  position: absolute;
+  z-index: 6;
+
+  top: 500px;
+  left: 716px;
+  width: 488px;
+  height: 61px;
+  text-align: left;
+  font: normal normal 900 50px/61px Dejanire Headline;
+  letter-spacing: 5px;
+  color: #2f2f2f;
+  opacity: 1;
+}
+
+.image-fond .text {
+  position: absolute;
+  z-index: 7;
+  top: 700px;
+  left: 658px;
+  width: 600px;
+  height: 61px;
+
+  text-align: center;
+  font: normal normal 300 50px/61px Dejanire Headline;
+  letter-spacing: 1px;
+  color: #2f2f2f;
+  opacity: 1;
+}
+
+.compteur {
+  display: flex;
+  z-index: 9;
+  position: absolute;
+  top: 750px;
+  left: 621px;
+  width: 679px;
+  height: 92px;
+  opacity: 1;
+}
+.compteur-item {
+  margin: 15px;
+  padding: 30px;
+}
+
+.affichage {
+  display: flex;
+  z-index: 10;
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  width: 679px;
+  height: 92px;
+  opacity: 1;
+}
+
+.aff-item {
+  text-align: center;
+  font: normal normal 900 50px/61px Dejanire Headline;
+  letter-spacing: 1px;
+  color: #2f2f2f;
+  opacity: 1;
+}
+
+#aff-jours {
+  margin-left: 70px;
+}
+
+#aff-heures {
+  margin-left: 70px;
+}
+
+#aff-minutes {
+  margin-left: 90px;
+}
+
+#aff-secondes {
+  margin-left: 90px;
+}
+
+.d-lien {
+  padding-top: 20px;
+  text-align: center;
+  font: normal normal 900 20px/24px Dejanire Headline;
+  letter-spacing: 0.4px;
+  position: absolute;
+  z-index: 11;
+  color: #ffffff;
+  background-color: #b163a4;
+  top: 950px;
+  left: 791px;
+  width: 339px;
+  height: 58px;
+  background: #b163a4 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.p-items {
+  padding-top: 40px;
+  margin-left: 900px;
+
+  opacity: 1;
+}
+
+.p-items p {
+  letter-spacing: 0.4px;
+  color: #2f2f2f;
+  font: normal normal normal 20px/25px Calibri;
+  width: 536px;
+  height: 145px;
+}
+
+#p2 {
+  text-align: left;
+  font: normal normal 200 45px/50px Dejanire Headline;
+  letter-spacing: 1px;
+  color: #2f2f2f;
+  opacity: 1;
+}
+
+#p4 {
+  font-weight: bold;
+}
+
+.image-fond2 {
+  top: 1997px;
+  width: 1920px;
+  height: 1407px;
+  display: flex;
+  opacity: 1;
+}
+
+.im_1077 {
+  top: 1997px;
+  position: absolute;
+  width: 1923px;
+  height: 1406px;
+  background: url('/images/Groupe_de_masques_3.png') no repeat;
+  background: 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+/* les responsive */
+
+@media screen and (max-width: 1920px) {
+  .affichage span {
+    display: none;
+  }
+
+  .affichage p {
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    width: 1088px;
+
+    font: normal normal 300 20px/20px Dejanire Headline;
+    letter-spacing: 0.6px;
+    color: #2f2f2f;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+}
+
+@media screen and (max-width: 1920px) {
+}
+
+@media screen and (max-width: 1920px) {
 }
