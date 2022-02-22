@@ -1,4 +1,4 @@
-@import "fonts/styles.scss";
+// @import "fonts/styles.scss";
 @import "variables.scss";
 @import "utilities.scss";
 @import "buttons.scss";
@@ -37,8 +37,10 @@ hr:not([size]) {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.2;
+  font-family: var(--body-headline-family);
+  letter-spacing: 1px;
 }
 
 h1, .h1 {
@@ -526,6 +528,31 @@ progress {
     bottom: 0;
     background-image: url('../images/Rectangle_39.png');
   }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(155deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0) 47%, rgba(0, 0, 0, 0.8));
+    z-index: 2;
+  }
+  & > .shape {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow-x: clip;
+    &:before {
+      content: '';
+      border-top: 150px solid transparent;
+      border-right: 99vw solid #fff;
+      border-bottom: 30px solid #fff;
+      position: absolute;
+      bottom: 0;
+      z-index: 3;
+    }
+  }
   @media screen and (min-width: 1366px) {
     height: calc(100vh - 60px);
   }
@@ -534,8 +561,7 @@ progress {
   }
   .default-event-infos {
     position: relative;
-    top: 0;
-    bottom: 50px;
+    bottom: 100px;
     text-align: center;
     left: 0;
     right: 0;
@@ -545,6 +571,7 @@ progress {
     justify-content: flex-end;
     height: 100%;
     padding: 15px 0 50px 0;
+    z-index: 4;
     img {
       display: block;
       margin: 0 auto;
@@ -560,6 +587,16 @@ progress {
     .date-range {
       font-weight: 900;
       font-size: 2rem;
+    }
+  }
+}
+
+.countdown-section {
+  .title {
+    font-size: 50px;
+    sup {
+      font-family: 'calibri', sans-serif;
+      font-weight: 600;
     }
   }
 }
@@ -606,9 +643,18 @@ progress {
           bottom: 15px;
           &.red {
             transform: rotate(30deg);
+            @media screen and (min-width: 1366px) {
+              right: -75%;
+              bottom: 30px;
+            }
           }
           &.yellow {
             bottom: 130px;
+            @media screen and (min-width: 1366px) {
+              width: 127px;
+              bottom: -135px;
+              right: 195px;
+            }
           }
         }
       }
@@ -619,10 +665,13 @@ progress {
         width: 50%;
         & > * {
           width: 70%;
+          width: 60%;
+          max-width: 682px;
         }
       }
       h2 {
         padding: 15px 0;
+        font-family: var(--body-headline-family);
       }
       .shapes {
         img {
@@ -633,10 +682,23 @@ progress {
             width: 51px;
             right: 0;
             bottom: -70px;
+            @media screen and (min-width: 1366px) {
+              width: 133px;
+              bottom: 335px;
+              right: unset;
+              left: -98%;
+            }
           }
           &.yellow {
             width: 147px;
             left: -78px;
+
+            @media screen and (min-width: 1366px) {
+              width: 342px;
+              bottom: 220px;
+              left: unset;
+              right: 10px;
+            }
           }
         }
       }
@@ -807,9 +869,9 @@ progress {
         &:first-child {
           grid-column: 1 / 2;
           grid-row: 1 / 3;
-          height: 552px;
+          // height: 552px;
           img {
-            height: 552px;
+            height: 100%;
           }
         }
       }
@@ -818,7 +880,7 @@ progress {
 }
 
 .footer {
-  background-color: #FFF264;
+  background-color: rgba(255, 242, 100, 0.7);
   padding: 50px 0 30px 0;
   font-size: .77rem;
   .footer-container {

@@ -2,6 +2,7 @@
   padding: 15px 30px;
   font-size: 1rem;
   border: 0;
+  font-family: var(--body-headline-family);
   &.button-primary {
     background-color: $button-primary-bg-color;
     color: #fff;

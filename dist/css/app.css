@@ -1,9 +1,6 @@
-@font-face {
-  font-family: "Calibri";
-  src: url("/calibri/Calibri_Regular.ttf") format("truetype");
-}
 :root {
-  --body-font-family: "Calibri", sans-serif;
+  --body-font-family: "calibri", sans-serif;
+  --body-headline-family: "dejanire-headline", serif;
   --font-monospace: monospace;
   --body-font-size: 1rem;
   --body-font-weight: normal;
@@ -35,7 +32,7 @@
 }
 @media screen and (min-width: 1500px) {
   .container {
-    width: 1422px;
+    width: 1200px;
   }
 }
 
@@ -86,6 +83,7 @@
   padding: 15px 30px;
   font-size: 1rem;
   border: 0;
+  font-family: var(--body-headline-family);
 }
 .button.button-primary {
   background-color: #B163A4;
@@ -126,8 +124,10 @@ hr:not([size]) {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.2;
+  font-family: var(--body-headline-family);
+  letter-spacing: 1px;
 }
 
 h1, .h1 {
@@ -620,6 +620,31 @@ progress {
   bottom: 0;
   background-image: url("../images/Rectangle_39.png");
 }
+.home-banner:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(155deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0) 47%, rgba(0, 0, 0, 0.8));
+  z-index: 2;
+}
+.home-banner > .shape {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow-x: clip;
+}
+.home-banner > .shape:before {
+  content: "";
+  border-top: 150px solid transparent;
+  border-right: 99vw solid #fff;
+  border-bottom: 30px solid #fff;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+}
 @media screen and (min-width: 1366px) {
   .home-banner {
     height: calc(100vh - 60px);
@@ -630,8 +655,7 @@ progress {
 }
 .home-banner .default-event-infos {
   position: relative;
-  top: 0;
-  bottom: 50px;
+  bottom: 100px;
   text-align: center;
   left: 0;
   right: 0;
@@ -641,6 +665,7 @@ progress {
   justify-content: flex-end;
   height: 100%;
   padding: 15px 0 50px 0;
+  z-index: 4;
 }
 .home-banner .default-event-infos img {
   display: block;
@@ -659,6 +684,14 @@ progress {
 .home-banner .default-event-infos .date-range {
   font-weight: 900;
   font-size: 2rem;
+}
+
+.countdown-section .title {
+  font-size: 50px;
+}
+.countdown-section .title sup {
+  font-family: "calibri", sans-serif;
+  font-weight: 600;
 }
 
 /* About Festival */
@@ -712,8 +745,21 @@ progress {
 .about-event .about-section-container .left-side .shapes img.red {
   transform: rotate(30deg);
 }
+@media screen and (min-width: 1366px) {
+  .about-event .about-section-container .left-side .shapes img.red {
+    right: -75%;
+    bottom: 30px;
+  }
+}
 .about-event .about-section-container .left-side .shapes img.yellow {
   bottom: 130px;
+}
+@media screen and (min-width: 1366px) {
+  .about-event .about-section-container .left-side .shapes img.yellow {
+    width: 127px;
+    bottom: -135px;
+    right: 195px;
+  }
 }
 .about-event .about-section-container .right-side {
   position: relative;
@@ -724,10 +770,13 @@ progress {
   }
   .about-event .about-section-container .right-side > * {
     width: 70%;
+    width: 60%;
+    max-width: 682px;
   }
 }
 .about-event .about-section-container .right-side h2 {
   padding: 15px 0;
+  font-family: var(--body-headline-family);
 }
 .about-event .about-section-container .right-side .shapes img {
   height: auto;
@@ -739,9 +788,25 @@ progress {
   right: 0;
   bottom: -70px;
 }
+@media screen and (min-width: 1366px) {
+  .about-event .about-section-container .right-side .shapes img.blue {
+    width: 133px;
+    bottom: 335px;
+    right: unset;
+    left: -98%;
+  }
+}
 .about-event .about-section-container .right-side .shapes img.yellow {
   width: 147px;
   left: -78px;
+}
+@media screen and (min-width: 1366px) {
+  .about-event .about-section-container .right-side .shapes img.yellow {
+    width: 342px;
+    bottom: 220px;
+    left: unset;
+    right: 10px;
+  }
 }
 
 /* stores section */
@@ -914,15 +979,14 @@ progress {
   .inspiration-section .inspiration-images > div:first-child {
     grid-column: 1/2;
     grid-row: 1/3;
-    height: 552px;
   }
   .inspiration-section .inspiration-images > div:first-child img {
-    height: 552px;
+    height: 100%;
   }
 }
 
 .footer {
-  background-color: #FFF264;
+  background-color: rgba(255, 242, 100, 0.7);
   padding: 50px 0 30px 0;
   font-size: 0.77rem;
 }
