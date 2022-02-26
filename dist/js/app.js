@@ -10,7 +10,6 @@ class App {
         this.menuToggler.classList.add('show');
       })
       this.menuToggler.querySelector('.close').addEventListener('click', () => {
-        console.log(this.menuToggler.classList)
         this.menuToggler.classList.remove('show');
       })
     }

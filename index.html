@@ -46,9 +46,13 @@
           </ul>
 
           <div class="shapes-container">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <img class="shape shape-image" src="dist/images/mobile_menu_shape.png" alt="">
+            <img class="shape green" src="dist/images/shape_1448.png" alt="">
+            <img class="shape purple" src="dist/images/shape_1443_mobile.png" alt="">
+            
+          </div>
+          <div class="mobile-menu-footer-container">
+            <a href="#">fedam.lu</a>
             <img src="dist/images/logo-footer.png" alt="Logo footer">
           </div>
         </div>
@@ -57,20 +61,22 @@
         <img src="images/logo.png" alt="logo" />
       </div>
 
-      <ul class="navbar-nav">
-        <li><a href="#">MIWWELFESTIVAL</a></li>
+      <div class="d-flex">
+        <ul class="navbar-nav">
+          <li><a href="#">MIWWELFESTIVAL</a></li>
 
-        <li><a href="#">LES MEMBRES </a></li>
+          <li><a href="#">LES MEMBRES </a></li>
 
-        <li><a href="#">NOS INSPIRATIONS</a></li>
-      </ul>
-      <div class="dropdown-list">
-        <div><span class="current">FR</span>  <span class="dropdown-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20.108" height="11.115" viewBox="0 0 20.108 11.115">
-          <path id="Tracé_1445" data-name="Tracé 1445" d="M1805.883,48.177l8.993,8.993,8.993-8.993" transform="translate(-1804.823 -47.116)" fill="none" stroke="#2f2f2f" stroke-linejoin="bevel" stroke-width="3"/>
-        </svg></span></div>
-        <div class="dropdown-list-items">
-          <div>FR</div>
-          <div>EN</div>
+          <li><a href="#">NOS INSPIRATIONS</a></li>
+        </ul>
+        <div class="dropdown-list">
+          <div><span class="current">FR</span>  <span class="dropdown-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20.108" height="11.115" viewBox="0 0 20.108 11.115">
+            <path id="Tracé_1445" data-name="Tracé 1445" d="M1805.883,48.177l8.993,8.993,8.993-8.993" transform="translate(-1804.823 -47.116)" fill="none" stroke="#2f2f2f" stroke-linejoin="bevel" stroke-width="3"/>
+          </svg></span></div>
+          <div class="dropdown-list-items">
+            <div>FR</div>
+            <div>EN</div>
+          </div>
         </div>
       </div>
     </header>
@@ -85,13 +91,36 @@
         </div>
       </div>
       <span class="shape"></span>
+      <img class="desktop-only desktop-shaddow" src="dist/images/desktop-banner-bottom-shaddow.png" alt="">
     </section>
 
-    <section class="default-section countdown-section">
+    <section class="countdown-section">
       <div class="container-fluid text-center">
         <h2 class="text-center title">Home Style in Luxembourg <sup>TM</sup></h2>
-        <div>
-          <p>Ouvertures exceptionnelles <br/> les dimanches 12 et 20 mars de 14h à 18h</p>
+        <div class="counter-wrapper active-counter-">
+          <div class="countdown-container">
+            <div class="item months">
+              <div class="label">Mois</div>
+              <div class="value">00</div>
+            </div>
+            <div class="item days">
+              <div class="label">Jours</div>
+              <div class="value">03</div>
+            </div>
+            <div class="item hours">
+              <div class="label">Heures</div>
+              <div class="value">10</div>
+            </div>
+            <div class="item minutes">
+              <div class="label">Minutes</div>
+              <div class="value">28</div>
+            </div>
+            <div class="item seconds">
+              <div class="label">Secondes</div>
+              <div class="value">45</div>
+            </div>
+          </div>
+          <p class="offer">Ouvertures exceptionnelles <br/> les dimanches 12 et 20 mars de 14h à 18h</p>
         </div>
         <button class="button button-primary">Découvrir les enseignes</button>
       </div>
@@ -101,7 +130,8 @@
       <div class="container">
         <div class="about-section-container">
           <div class="left-side">
-            <img class="main-image" src="images_png/Groupe_de_masques_1.png" alt=""/>
+            <img class="main-image mobile-only" src="dist/images/description-shape1.png" alt=""/>
+            <img class="main-image desktop-only" src="dist/images/desktop-description-shape1.png" alt=""/>
             <div class="shapes">
               <img src="dist/images/shape_1082.png" class="yellow" alt="" />
               <img src="dist/images/shape_1081.png" class="red" alt="" />
@@ -127,11 +157,14 @@
               articles d’ameublement de qualité, des marques renommées, et surtout le
               conseil de professionnels avisés et engagés.
             </p>
-            <p>L’édition de printemps du Miwwelfestival a lieu du </br>> samedi 12 au dimanche 20 mars inclus.</p>
+            <p>L’édition de printemps du Miwwelfestival a lieu du </br> <span class="bold">samedi 12 au dimanche 20 mars inclus.</span></p>
 
             <div class="shapes">
-              <img src="dist/images/shape_1442.png" class="blue" alt="" />
-              <img src="dist/images/shape_1443.png" class="yellow" alt="" />
+              <img src="dist/images/shape_1442.png" class="blue mobile-only" alt="" />
+              <img src="dist/images/desktop-shape_1442.png" class="blue desktop-only" alt="" />
+              
+              <img src="dist/images/shape_1443.png" class="yellow mobile-only" alt="" />
+              <img src="dist/images/desktop-shape_1082.png" class="yellow desktop-only" alt="" />
             </div>
           </div>
         </div>
@@ -156,12 +189,13 @@
                 <li>Angle vert </li>
               </ul>
             </div>
+
             <div class="list-group">
-              <h2 class="list-title">b - d</h2>
+              <h2 class="list-title">F - G - H</h2>
               <ul>
-                <li>Boconcept</li>
-                <li>Decker Line</li>
-                <li>Dorma Home</li>
+                <li>Fiisschen Concept </li>
+                <li>Galerie Moderne</li>
+                <li>House of  Comfort </li>
               </ul>
             </div>
 
@@ -172,6 +206,34 @@
                 <li>Lucien Schweitzer - Boutiques </li>
               </ul>
             </div>
+
+            <div class="list-group">
+              <h2 class="list-title">S</h2>
+              <ul>
+                <li>Stoll Maître Matelassier</li>
+                <li>Studio-Land / Baby</li>
+                <li>Kids & Jugendwelten</li>
+              </ul>
+            </div>
+
+            <div class="list-group">
+              <h2 class="list-title">b - d</h2>
+              <ul>
+                <li>Boconcept</li>
+                <li>Decker Line</li>
+                <li>Dorma Home</li>
+              </ul>
+            </div>
+
+            
+            <div class="list-group">
+              <h2 class="list-title">K</h2>
+              <ul>
+                <li>Kichechef,</li>
+                <li>KicheConcept </li>
+              </ul>
+            </div>
+
             <div class="list-group">
               <h2 class="list-title">M - O -R</h2>
               <ul>
@@ -179,6 +241,14 @@
                 <li>Mich-Gillen </li>
                 <li>Oestreicher</li>
                 <li>Roche Bobois</li>
+              </ul>
+            </div>
+
+            <div class="list-group">
+              <h2 class="list-title">T</h2>
+              <ul>
+                <li>Thommessen Intérieurs </li>
+                <li>Tousalon</li>
               </ul>
             </div>
           </div>
@@ -191,8 +261,17 @@
 
     <section class="default-section inspiration-section">
       <div class="shapes">
-        <img src="dist/images/shape_1437.png" class="yellow" alt="">
+        <img src="dist/images/shape_1098.png" class="blue desktop-only" alt="">
+        <img src="dist/images/shape_1099.png" class="yellow desktop-only" alt="">
+        <img src="dist/images/shape_1437.png" class="yellow mobile-only" alt="">
         <img src="dist/images/shape_1438.png" class="red" alt="">
+      </div>
+      <div class="mobile-social-follow">
+        <div class="label">Nous suivre</div>
+        <div class="social-icons">
+          <a href="#"><img src="dist/images/instagram.png" alt=""></a>
+          <a href="#"><img src="dist/images/facebbok.png" alt=""></a>
+        </div>
       </div>
       <div class="container">
         <h2 class="title">S’inspirer, craquer, meubler !</h2>
@@ -223,6 +302,11 @@
     </section>
 
     <footer class="footer">
+      <div class="shapes">
+        <img class="red" src="dist/images/mobile_shape_1405.png" alt="">
+        <img class="blue" src="dist/images/mobile_shape_1392.png" alt="">
+        <img class="yellow" src="dist/images/mobile_shape_1445.png" alt="">
+      </div>
       <section>
         <div class="container">
           <div class="footer-container">
@@ -239,7 +323,7 @@
                 <ul class="list-unstyled">
                   <li>Tél: +352 43 94 44 1 | Fax: 43 94 50</li>
                   <li> E-mail: <a href="mailto:info@fedam.lu">info@fedam.lu</a></li>
-                  <li><a href="http://fedam.lu">fedam.lu</a></li>
+                  <li class="mt-5"><a href="http://fedam.lu" class="text-underlined">fedam.lu</a></li>
                 </ul>
               </div>
             </div>
@@ -253,6 +337,8 @@
       </section>
     </footer>
 
+    <script src="dist/js/map-script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLkzmlhbqfE987AJF3hUh1r7iaSadyTo&map_ids=85fc3627aa19ce6&callback=initMap"></script>
     <script src="dist/js/app.js"></script>
   </body>
 </html>
