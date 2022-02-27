@@ -63,11 +63,11 @@
 
       <div class="d-flex">
         <ul class="navbar-nav">
-          <li><a href="#">MIWWELFESTIVAL</a></li>
+          <li><a href="#about-section">MIWWELFESTIVAL</a></li>
 
-          <li><a href="#">LES MEMBRES </a></li>
+          <li><a href="#members-section">LES MEMBRES </a></li>
 
-          <li><a href="#">NOS INSPIRATIONS</a></li>
+          <li><a href="#inspirations-section">NOS INSPIRATIONS</a></li>
         </ul>
         <div class="dropdown-list">
           <div><span class="current">FR</span>  <span class="dropdown-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20.108" height="11.115" viewBox="0 0 20.108 11.115">
@@ -126,7 +126,7 @@
       </div>
     </section>
 
-    <section class="default-section about-event">
+    <section id="about-section" class="default-section about-event">
       <div class="container">
         <div class="about-section-container">
           <div class="left-side">
@@ -171,7 +171,7 @@
       </div>
     </section>
 
-    <section class="default-section stores-presents">
+    <section id="members-section" class="default-section stores-presents">
       <h2 class="stores-title">Les magasins <span>participants</span></h2>
       <div class="stores-background-container">
         <div class="container">
@@ -225,7 +225,6 @@
               </ul>
             </div>
 
-            
             <div class="list-group">
               <h2 class="list-title">K</h2>
               <ul>
@@ -259,7 +258,7 @@
       </div>
     </section>
 
-    <section class="default-section inspiration-section">
+    <section id="inspirations-section" class="default-section inspiration-section">
       <div class="shapes">
         <img src="dist/images/shape_1098.png" class="blue desktop-only" alt="">
         <img src="dist/images/shape_1099.png" class="yellow desktop-only" alt="">
@@ -303,6 +302,11 @@
 
     <footer class="footer">
       <div class="shapes">
+        <!-- <div class="desktop-only pinkPurple"> -->
+          <img class="desktop-only pink" src="dist/images/shape_1389.png" alt="">
+          <img class="desktop-only purple" src="dist/images/shape_1390.png" alt="">
+        <!-- </div> -->
+
         <img class="red" src="dist/images/mobile_shape_1405.png" alt="">
         <img class="blue" src="dist/images/mobile_shape_1392.png" alt="">
         <img class="yellow" src="dist/images/mobile_shape_1445.png" alt="">
@@ -336,6 +340,16 @@
         </div>
       </section>
     </footer>
+
+    <div class="scroll-top-button">
+      Aller en haut
+    </div>
+
+    <div class="theme-setting">
+      <button class="close">&times;</button>
+      <button type="button" class="button button-primary with-counter">Avec Compteur</button>
+      <button type="button" class="button button-secondary without-counter">Sans Compteur</button>
+    </div>
 
     <script src="dist/js/map-script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLkzmlhbqfE987AJF3hUh1r7iaSadyTo&map_ids=85fc3627aa19ce6&callback=initMap"></script>
