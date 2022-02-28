@@ -5,6 +5,7 @@ class App {
     this.menus = document.querySelectorAll('.header .navbar-nav a')
     this.scrollTopButton = document.querySelector('.scroll-top-button')
     this.settingButtons = document.querySelectorAll('.theme-setting button')
+    
   }
 
   init() {
@@ -15,6 +16,9 @@ class App {
       this.menuToggler.querySelector('.close').addEventListener('click', () => {
         this.menuToggler.classList.remove('show');
       })
+
+      // add inspiration-images to instagram feed
+      this.instagramFeedObserver('.elfsight-app-6a5fb8cb-5f22-4e1c-bd87-78ad86af2856')
     }
     
     if (this.menus.length > 0) {
@@ -64,6 +68,23 @@ class App {
         this.scrollTo(document.body)
       })
     }
+  }
+
+  instagramFeedObserver(target) {
+    let targetElement = document.querySelector(target)
+    let observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type == 'childList') {
+          setTimeout(() => {
+            let imageContainer = targetElement.querySelector('.eapps-instagram-feed-posts-view')
+            imageContainer.classList.add('inspiration-images')
+            targetElement.querySelector('.eapps-link').style.display = 'none'
+          }, 2000)
+        }
+      })
+    });
+
+    observer.observe(targetElement, { attributes: true, childList: true, characterData: true })
   }
 
   scrollTo(to) {
