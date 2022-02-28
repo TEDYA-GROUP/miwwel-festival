@@ -445,12 +445,12 @@ progress {
   }
   .navbar-nav {
     display: none;
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 993px) {
       display: block;
     }
   }
   .dropdown-list {
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 993px) {
       margin-left: 50px;
     }
   }
@@ -494,10 +494,6 @@ progress {
 }
 .navbar-nav {
   margin: 0;
-  
-  @media screen and (min-width: 993px) {
-    display: block;
-  }
   li {
     display: inline-block;
     list-style: none;
@@ -571,11 +567,18 @@ progress {
   position: relative;
   margin-top: 60px;
   background-image: url('../images/mobile-home-bg.png');
-  background-position: -60px -135px;
+  background-position: 0px -135px;
   background-repeat: no-repeat;
+  background-size: cover;
   overflow-x: clip;
-  // height: 60vh;
   height: 55vh;
+  @media screen and (min-width: 576px) {
+    background-size: cover;
+    background-position: 0px -228px;
+  }
+  @media screen and (min-width: 767px) {
+
+  }
   @media screen and (min-width: 1366px) {
     background-image: url('../images/desktop-home-bg.png');
     background-size: cover;
@@ -606,8 +609,11 @@ progress {
     z-index: 3;
     width: 100%;
     height: 85px;
-    background-image: url('../images/mobile-banner-bottom-shaddow.png');
-    background-repeat: no-repeat;
+    // background-image: url('../images/mobile-banner-bottom-shaddow.png');
+    // background-repeat: no-repeat;
+    @media screen and (min-width: 767px) {
+      background: none;
+    }
     @media screen and (min-width: 1366px) {
       background-image: url('../images/desktop-banner-bottom-shaddow.png');
       background-image: none;
@@ -706,7 +712,10 @@ progress {
   .title {
     font-family: dejanire-headline, serif;
     font-weight: 300;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
+    @media screen and (min-width: 400px) {
+      font-size: 1.7rem;
+    }
     @media screen and (min-width: 1366px) {
       font-size: 2.5rem;
       margin-bottom: 0;
@@ -729,6 +738,10 @@ progress {
     &.active-counter {
       .countdown-container {
         display: flex;
+        flex-wrap: wrap;
+        @media screen and (min-width: 330px) {
+          flex-wrap: nowrap;
+        }
       }
       .offer {
         display: none;
@@ -744,7 +757,10 @@ progress {
     justify-content: center;
     // padding-bottom: 20px;
     .item {
-      padding: 0 16px;
+      padding: 0 11px;
+      @media screen and (min-width: 400px) {
+        padding: 0 16px;
+      }
       @media screen and (min-width: 1366px) {
         padding: 0 36px;
       }
@@ -785,17 +801,42 @@ progress {
     .left-side {
       position: relative;
       width: 100%;
+      min-height: 315px;
+      margin-bottom: 30px;
+      @media screen and (min-width: 395px) {
+        margin-bottom: 0px;
+      }
       @media screen and (min-width: 993px) {
         width: 50%;
       }
-      min-height: 315px;
-      margin-bottom: 30px;
       .main-image {
         position: absolute;
         top: -40px;
-        left: -94px;
+        // left: -94px;
+        left: -30%;
         width: 111%;
-        @media screen and (min-width: 1360px) {
+        @media screen and (min-width: 395px) {
+          position: relative;
+          left: -29%;
+        }
+        @media screen and (min-width: 578px) {
+          position: relative;
+          left: -35%;
+        }
+        @media screen and (min-width: 640px) {
+          position: relative;
+          left: -35%;
+        }
+        @media screen and (min-width: 730px) {
+          position: relative;
+          left: -44%;
+        }
+        @media screen and (min-width: 1000px) {
+          width: 117%;
+          left: -131px;
+          top: -40px;
+        }
+        @media screen and (min-width: 1366px) {
           width: 117%;
           left: -160px;
           top: -175px;
@@ -810,6 +851,9 @@ progress {
           bottom: 15px;
           &.red {
             transform: rotate(8deg);
+            @media screen and (min-width: 640px) {
+              bottom: 95px;
+            }
             @media screen and (min-width: 1366px) {
               transform: rotate(1deg);
               right: -75%;
@@ -819,6 +863,9 @@ progress {
           &.yellow {
             bottom: 130px;
             transform: rotate(8deg);
+            @media screen and (min-width: 640px) {
+              bottom: 398px;
+            }
             @media screen and (min-width: 1366px) {
               width: 127px;
               bottom: -212px;
@@ -832,12 +879,21 @@ progress {
       position: relative;
       padding: 0 10px;
       @media screen and (min-width: 993px) {
-        padding: 0;
+        padding: 50px;
         width: 50%;
-        & > * {
-          width: 70%;
-          width: 60%;
-          max-width: 682px;
+      }
+      & > * {
+        width: 70%;
+        width: 100%;
+        max-width: 682px;
+        @media screen and (min-width: 993px) {
+          width: 80%;
+        }
+        @media screen and (min-width: 1024px) {
+          width: 80%;
+        }
+        @media screen and (min-width: 1320px) {
+          width: 65%;
         }
       }
       h2 {
@@ -854,6 +910,12 @@ progress {
             width: 51px;
             right: 0;
             bottom: -70px;
+            @media screen and (min-width: 993px) {
+              width: 133px;
+              bottom: 335px;
+              right: unset;
+              left: -81%;
+            }
             @media screen and (min-width: 1366px) {
               width: 133px;
               bottom: 335px;
@@ -864,7 +926,12 @@ progress {
           &.yellow {
             width: 147px;
             left: -78px;
-
+            @media screen and (min-width: 993px) {
+              width: 130px;
+              bottom: 536px;
+              left: unset;
+              right: 10px;
+            }
             @media screen and (min-width: 1366px) {
               width: 342px;
               bottom: 273px;
@@ -880,73 +947,114 @@ progress {
 
 /* stores section */
 .stores-presents {
-  text-align: center;
   position: relative;
+  text-align: center;
   margin-top: 20px;
   padding-bottom: 0px;
   overflow-x: clip;
+  // background-image: url('../images/desktop-store-bg.png');
+  // background-position: 0 center;
+  background-repeat: no-repeat;
+  background-color: #31B6B3;
+  @media screen and (min-width: 768px) {
+    // background-size: cover;
+  }
   @media screen and (min-width: 1366px) {
     margin-top: 80px;
-    background-image: url('../images/desktop-store-bg.png');
   }
   &:before {
     content: '';
-    border-top: 90px solid transparent;
-    border-bottom: 20px solid #31B6B3;
-    border-right: 100vw solid #31B6B3;
+    border-top: 0 solid #FFF;
+    border-left: 100vw solid #fff;
+    border-bottom: 150px solid transparent;
+    height: 150px;
     position: absolute;
-    top: 0px;
+    top: -2px;
     left: 0;
-    @media screen and (min-width: 1366px) {
-      top: 83px;
-      display: none;
-    }
+    // @media screen and (min-width: 1366px) {
+    //   top: 83px;
+    //   display: none;
+    // }
   }
 
+  // .stores-background-container {
+  //   position: relative;
+  //   background-color: #31B6B3;
+  //   padding: 10px 0 0 0;
+  //   @media screen and (min-width: 1366px) {
+  //     background-color: initial;
+  //     // background-image: url('../images/desktop-store-bg.png');
+  //     .container, .stores-map-container {
+  //       width: 1024px;
+  //       margin: 0 auto;
+  //     }
+  //     &:after {
+  //       content: "";
+  //       position: absolute;
+  //       bottom: -2px;
+  //       left: 0;
+  //       border-left: 100vw solid #fff;
+  //       border-bottom: 15px solid #fff;
+  //       border-top: 50px solid transparent;
+  //       z-index: 1;
+  //     }
+  //   }
+  // }
   .stores-background-container {
-    position: relative;
-    background-color: #31B6B3;
-    padding: 10px 0 0 0;
-    @media screen and (min-width: 1366px) {
-      background-color: initial;
-      // background-image: url('../images/desktop-store-bg.png');
-      .container, .stores-map-container {
-        width: 1024px;
-        margin: 0 auto;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        border-left: 100vw solid #fff;
-        border-bottom: 15px solid #fff;
-        border-top: 50px solid transparent;
-        z-index: 1;
-      }
-    }
+    
   }
 
   .stores-title {
     font-family: dejanire-headline;
     font-weight: 300;
-    position: absolute;
+    position: relative;
     z-index: 3;
+    top: 50px;
     font-size: 2.5em;
     line-height: 1em;
-    // bottom: -97px;
-    top: -9px;
-    // transform: translateY(-110px);
-    @media screen and (min-width: 1366px) {
-      position: relative;
-      bottom: 10px;;
-      font-size: 5rem;
-      line-height: 1.2em;
-      transform: none;
+    @media screen and (min-width: 320px) {
+      max-width: 70%;
       background: -webkit-linear-gradient(277deg, #000 52%, #fff 25%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin: 0 auto;
+      top: 0;
+      transform: translateY(20px);
     }
+    @media screen and (min-width: 600px) {
+      max-width: 50%;
+      background: -webkit-linear-gradient(277deg, #000 52%, #fff 25%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0 auto;
+      top: 0;
+      transform: translateY(20px);
+    }
+    @media screen and (min-width: 845px) {
+      font-size: 3rem;
+      transform: translateY(16px);
+      span {
+        background: -webkit-linear-gradient(280deg, #000 37%, #fff 25%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    @media screen and (min-width: 993px) {
+      max-width: 100%;
+    }
+    // bottom: -97px;
+    // top: -9px;
+    // transform: translateY(-110px);
+    // @media screen and (min-width: 1366px) {
+    //   position: relative;
+    //   bottom: 10px;;
+    //   font-size: 5rem;
+    //   line-height: 1.2em;
+    //   transform: none;
+    //   background: -webkit-linear-gradient(277deg, #000 52%, #fff 25%);
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    // }
     span {
       @media screen and (max-width: 993px) {
         background: -webkit-linear-gradient(282deg, #000 47%, #fff 25%);
@@ -958,6 +1066,7 @@ progress {
   .stores-desscription {
     width: 95%;
     margin: 0 auto;
+    padding-top: 100px;
     @media screen and (min-width: 1366px) {
       width: 65%;
       padding: 20px 0;

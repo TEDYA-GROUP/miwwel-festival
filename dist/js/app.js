@@ -22,7 +22,6 @@ class App {
         item.addEventListener('click', (event) => {
           event.preventDefault();
           let targetBloc = document.querySelector(item.getAttribute('href'))
-          console.log(targetBloc)
           if (targetBloc) {
             this.scrollTo(targetBloc)
           }
