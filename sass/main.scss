@@ -2,6 +2,7 @@
 @import "variables.scss";
 @import "utilities.scss";
 @import "buttons.scss";
+@import "animation.scss";
 
 *,
 *::before,
@@ -464,6 +465,7 @@ progress {
     .navbar-nav {
       display: block;
       padding-left: 0;
+      position: relative;
       li {
         padding: 20px 0;
       }
@@ -483,6 +485,8 @@ progress {
   &.show {
     .mobile-menu {
       display: block;
+      -webkit-animation: slide-right 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: slide-right 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
     .hamburger {
       display: none;
@@ -507,7 +511,8 @@ progress {
 
 .mobile-menu {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
+  overflow: clip;
   background-color: #fff;
   position: absolute;
   top: 0;
@@ -537,11 +542,18 @@ progress {
     bottom: 0;
   }
   .shape-image {
-    bottom: 120px
+    bottom: 73px;
+    @media screen and (min-width: 375px) {
+      bottom: 120px
+    }
   }
   .green {
-    bottom: 180px;
-    left: 60px
+    bottom: 157px;
+    left: 36px;
+    @media screen and (min-width: 375px) {
+      bottom: 180px;
+      left: 60px
+    }
   }
   .purple {
     left: -3px;
@@ -949,7 +961,7 @@ progress {
 .stores-presents {
   position: relative;
   text-align: center;
-  margin-top: 20px;
+  // margin-top: 20px;
   padding-bottom: 0px;
   overflow-x: clip;
   // background-image: url('../images/desktop-store-bg.png');
@@ -960,22 +972,22 @@ progress {
     // background-size: cover;
   }
   @media screen and (min-width: 1366px) {
-    margin-top: 80px;
+    // margin-top: 80px;
   }
-  // &:before {
-  //   content: '';
-  //   border-top: 0 solid #FFF;
-  //   border-left: 100vw solid #fff;
-  //   border-bottom: 150px solid transparent;
-  //   height: 150px;
-  //   position: absolute;
-  //   top: -2px;
-  //   left: 0;
-  //   // @media screen and (min-width: 1366px) {
-  //   //   top: 83px;
-  //   //   display: none;
-  //   // }
-  // }
+  &:before {
+    content: '';
+    border-top: 0 solid #FFF;
+    border-left: 100vw solid #fff;
+    border-bottom: 150px solid transparent;
+    height: 150px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    // @media screen and (min-width: 1366px) {
+    //   top: 83px;
+    //   display: none;
+    // }
+  }
 
   // .stores-background-container {
   //   position: relative;
@@ -1012,20 +1024,20 @@ progress {
     top: 50px;
     font-size: 2.5em;
     line-height: 1em;
-    @media screen and (min-width: 320px) {
-      max-width: 70%;
-      background: -webkit-linear-gradient(277deg, #000 52%, #fff 25%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin: 0 auto;
-      top: 0;
-      transform: translateY(20px);
-    }
+    // @media screen and (min-width: 320px) {
+    //   max-width: 70%;
+    //   background: -webkit-linear-gradient(277deg, #000 52%, #fff 25%);
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    //   margin: 0 auto;
+    //   top: 0;
+    //   transform: translateY(20px);
+    // }
     @media screen and (min-width: 600px) {
       max-width: 50%;
-      background: -webkit-linear-gradient(277deg, #000 52%, #fff 25%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: -webkit-linear-gradient(277deg, #000 52%, #fff 25%);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       margin: 0 auto;
       top: 0;
       transform: translateY(20px);
@@ -1069,7 +1081,7 @@ progress {
     padding-top: 100px;
     @media screen and (min-width: 1366px) {
       width: 65%;
-      padding: 20px 0;
+      padding: 100px 0;
       line-height: 1.2em;
     }
   }
@@ -1206,9 +1218,12 @@ progress {
     position: relative;
     z-index: 2;
     width: 75%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 2.5rem;
+    @media screen and (min-width: 414) {
+      font-size: 2rem;
+    }
     @media screen and (min-width: 1366px) {
       width: 100%;
     }
