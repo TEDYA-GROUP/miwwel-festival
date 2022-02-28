@@ -4,116 +4,363 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIWWEL FESTIVAL</title>
 
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="js/bootstrap.bundle.min.js" defer></script> -->
-    <link rel="stylesheet" href="style.css" />
     <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet"
+    href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+    rel="stylesheet"
     />
-    <title></title>
+    <link rel="stylesheet" href="https://use.typekit.net/ejp3lht.css">
+    <link rel="stylesheet" href="dist/css/app.css">
+    
   </head>
   <body>
-    <header>
-      <div class="logo">
+    <header class="header">
+      <div class="menu-toggler">
+        <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" width="34" height="19.75" viewBox="0 0 34 19.75">
+          <g id="Groupe_393" data-name="Groupe 393" transform="translate(-37 -50.625)">
+            <line id="Ligne_13" data-name="Ligne 13" x2="34" transform="translate(37 69.5)" fill="none" stroke="#222" stroke-width="1.75"/>
+            <line id="Ligne_14" data-name="Ligne 14" x2="34" transform="translate(37 60.5)" fill="none" stroke="#222" stroke-width="1.75"/>
+            <line id="Ligne_15" data-name="Ligne 15" x2="34" transform="translate(37 51.5)" fill="none" stroke="#222" stroke-width="1.75"/>
+          </g>
+        </svg>
+        
+        <div class="mobile-menu">
+          <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24.893" height="24.893" viewBox="0 0 24.893 24.893">
+            <g id="Groupe_391" data-name="Groupe 391" transform="translate(-32.548 -52.299) rotate(3)">
+              <path id="Tracé_1446" data-name="Tracé 1446" d="M0,0,22.643,20.1" transform="translate(37 52.25)" fill="none" stroke="#222" stroke-width="1.75"/>
+              <path id="Tracé_1447" data-name="Tracé 1447" d="M0,0,22.643,20.1" transform="translate(38.27 73.623) rotate(-90)" fill="none" stroke="#222" stroke-width="1.75"/>
+            </g>
+          </svg>
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="logo-container">
+              <img src="images/logo.png" alt="logo" />
+            </div>
+          </div>
+          <ul class="navbar-nav">
+            <li><a href="#">MIWWELFESTIVAL</a></li>
+    
+            <li><a href="#">LES MEMBRES </a></li>
+    
+            <li><a href="#">NOS INSPIRATIONS</a></li>
+          </ul>
+
+          <div class="shapes-container">
+            <img class="shape shape-image" src="dist/images/mobile_menu_shape.png" alt="">
+            <img class="shape green" src="dist/images/shape_1448.png" alt="">
+            <img class="shape purple" src="dist/images/shape_1443_mobile.png" alt="">
+            
+          </div>
+          <div class="mobile-menu-footer-container">
+            <a href="#">fedam.lu</a>
+            <img src="dist/images/logo-footer.png" alt="Logo footer">
+          </div>
+        </div>
+      </div>
+      <div class="logo-container">
         <img src="images/logo.png" alt="logo" />
       </div>
 
-      <ul>
-        <li><a href="#">MIWWELFESTIVAL</a></li>
+      <div class="d-flex">
+        <ul class="navbar-nav">
+          <li><a href="#about-section">MIWWELFESTIVAL</a></li>
 
-        <li><a href="#">LES MEMBRES </a></li>
+          <li><a href="#members-section">LES MEMBRES </a></li>
 
-        <li><a href="#">NOS INSPIRATIONS</a></li>
-
-        <li>
-          <a href="#">FR</a>
-          <i class="bx bxs-chevron-down"></i>
-        </li>
-      </ul>
-    </header>
-
-    <div class="image-fond">
-      <img
-        src="images/spacejoy-sh6Aj176NAQ-unsplash.png"
-        alt=""
-        class="image-1"
-      />
-
-      <p>12/03-20/03/2022</p>
-
-      <div class="text">Home Style in Luxembourg</div>
-
-      <img src="images/Rectangle_39.png" alt="" class="image-2" />
-
-      <img src="images/Tracé 1164.png" alt="" class="image-3" />
-
-      <img src="images/Tracé 1076.png" alt="" class="image-4" />
-
-      <img src="images/Groupe 376.png" alt="" class="image-5" />
-
-      <img src="images/Groupe 12.png" alt="" class="image-6" />
-
-      <img src="images/Tracé 1433.png" alt="" class="image-7" />
-
-      <div id="count" class="compteur">
-        <span id="month" class="compteur-item">Mois</span>
-        <span id="day" class="compteur-item"> Jours</span>
-        <span id="hour" class="compteur-item">Heures</span>
-        <span id="min" class="compteur-item">Minutes</span>
-        <span id="sec" class="compteur-item">Secondes</span>
-
-        <div class="affichage">
-          <p>
-            Ouvertures exceptionnelles<br />
-            les dimanches 12 et 20 mars de 14h à 18h
-          </p>
-          <span id="aff-mois" class="aff-item">00</span>
-          <span id="aff-jours" class="aff-item">03</span>
-          <span id="aff-heures" class="aff-item">10</span>
-          <span id="aff-minutes" class="aff-item">28</span>
-          <span id="aff-secondes" class="aff-item">45</span>
+          <li><a href="#inspirations-section">NOS INSPIRATIONS</a></li>
+        </ul>
+        <div class="dropdown-list">
+          <div class="dropdown-toggle">
+            <span class="current">FR</span>  <span class="dropdown-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20.108" height="11.115" viewBox="0 0 20.108 11.115">
+              <path id="Tracé_1445" data-name="Tracé 1445" d="M1805.883,48.177l8.993,8.993,8.993-8.993" transform="translate(-1804.823 -47.116)" fill="none" stroke="#2f2f2f" stroke-linejoin="bevel" stroke-width="3"/>
+              </svg>
+            </span>
+          </div>
+          <div class="dropdown-list-items">
+            <div>FR</div>
+            <div>EN</div>
+          </div>
         </div>
       </div>
+    </header>
 
-      <a href="#"><div class="d-lien">Decouvrir les enseignes</div></a>
+    <section class="home-banner">
+      <div class="container">
+        <div class="default-event-infos">
+          <img src="dist/images/Groupe_376.png" alt="">
+          <div class="date-wrapper">
+            <span class="date-range">12/03 - 20/03/2022</span>
+          </div>
+        </div>
+      </div>
+      <span class="shape"></span>
+      <img class="desktop-only desktop-shaddow" src="dist/images/desktop-banner-bottom-shaddow.png" alt="">
+    </section>
+
+    <section class="countdown-section">
+      <div class="container-fluid text-center">
+        <h2 class="text-center title">Home Style in Luxembourg <sup>TM</sup></h2>
+        <div class="counter-wrapper active-counter">
+          <div class="countdown-container">
+            <div class="item months">
+              <div class="label">Mois</div>
+              <div class="value">00</div>
+            </div>
+            <div class="item days">
+              <div class="label">Jours</div>
+              <div class="value">03</div>
+            </div>
+            <div class="item hours">
+              <div class="label">Heures</div>
+              <div class="value">10</div>
+            </div>
+            <div class="item minutes">
+              <div class="label">Minutes</div>
+              <div class="value">28</div>
+            </div>
+            <div class="item seconds">
+              <div class="label">Secondes</div>
+              <div class="value">45</div>
+            </div>
+          </div>
+          <p class="offer">Ouvertures exceptionnelles <br/> les dimanches 12 et 20 mars de 14h à 18h</p>
+        </div>
+        <button class="button button-primary">Découvrir les enseignes</button>
+      </div>
+    </section>
+
+    <section id="about-section" class="default-section- about-event">
+      <div class="container">
+        <div class="about-section-container">
+          <div class="left-side">
+            <img class="main-image mobile-only" src="dist/images/description-shape1.png" alt=""/>
+            <img class="main-image desktop-only" src="dist/images/desktop-description-shape1.png" alt=""/>
+            <div class="shapes">
+              <img src="dist/images/shape_1082.png" class="yellow" alt="" />
+              <img src="dist/images/shape_1081.png" class="red" alt="" />
+            </div>
+          </div>
+          <div class="right-side">
+            <p>
+              Le Miwwelfestival (Festival du Meuble) c’est un moment incontournable
+              dans le paysage luxembourgeois. Orchestré 2 fois par an, au printemps et
+              à l’automne par les professionnels de l’ameublement, il permet de
+              bénéficier de promotions exceptionnelles allant de 30 à 50% sur de
+              nombreux articles auprès des magasins participants.
+            </p>
+      
+            <h2>
+              C’est l’occasion rêvée pour relooker son intérieur en faisant de bonnes
+              affaires.
+            </h2>
+            
+            <p>
+              Le Miwwelfestival, c’est aussi l’occasion de rencontrer des commerçants
+              passionnés qui vous font découvrir le « Home Style in Luxembourg ». Des
+              articles d’ameublement de qualité, des marques renommées, et surtout le
+              conseil de professionnels avisés et engagés.
+            </p>
+            <p>L’édition de printemps du Miwwelfestival a lieu du </br> <span class="bold">samedi 12 au dimanche 20 mars inclus.</span></p>
+
+            <div class="shapes">
+              <img src="dist/images/shape_1442.png" class="blue mobile-only" alt="" />
+              <img src="dist/images/desktop-shape_1442.png" class="blue desktop-only" alt="" />
+              
+              <img src="dist/images/shape_1443.png" class="yellow mobile-only" alt="" />
+              <img src="dist/images/desktop-shape_1082.png" class="yellow desktop-only" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="members-section" class="default-section- stores-presents">
+      <div class="stores-background-container">
+        <h2 class="stores-title"><span>Les magasins participants</span></h2>
+        <div class="container">
+          <p class="stores-desscription">
+            Localiser en un click tous les magasins participants au Miwwelfestival du printemps 2022 et découvrez sur leur site respectif leurs spécialités en matière d’ameublement, leurs marques et leurs horaires d’ouvertures.
+          </p>
+
+          <div class="stores-list-container">
+            <div class="list-group">
+              <h2 class="list-title">a</h2>
+              <ul>
+                <li><a href="#" target="__blank">Alvisse</a></li>
+                <li><a href="#" target="__blank">Ameublement Jean Ruhl</a></li>
+                <li><a href="#" target="__blank">Ameublement Thill</a></li>
+                <li><a href="#" target="__blank">Angle vert </a></li>
+              </ul>
+            </div>
+
+            <div class="list-group">
+              <h2 class="list-title">F - G - H</h2>
+              <ul>
+                <li><a href="#" target="__blank">Fiisschen Concept </a></li>
+                <li><a href="#" target="__blank">Galerie Moderne</a></li>
+                <li><a href="#" target="__blank">House of  Comfort </a></li>
+              </ul>
+            </div>
+
+            <div class="list-group">
+              <h2 class="list-title">l</h2>
+              <ul>
+                <li><a href="#" target="__blank">Literie Kandel Bereldange</a></li>
+                <li><a href="#" target="__blank">Lucien Schweitzer - Boutiques </a></li>
+              </ul>
+            </div>
+
+            <div class="list-group">
+              <h2 class="list-title">S</h2>
+              <ul>
+                <li><a href="#" target="__blank">Stoll Maître Matelassier</a></li>
+                <li><a href="#" target="__blank">Studio-Land / Baby</a></li>
+                <li><a href="#" target="__blank">Kids & Jugendwelten</a></li>
+              </ul>
+            </div>
+
+            <div class="list-group">
+              <h2 class="list-title">b - d</h2>
+              <ul>
+                <li><a href="#" target="__blank">Boconcept</a></li>
+                <li><a href="#" target="__blank">Decker Line</a></li>
+                <li><a href="#" target="__blank">Dorma Home</a></li>
+              </ul>
+            </div>
+
+            <div class="list-group">
+              <h2 class="list-title">K</h2>
+              <ul>
+                <li><a href="#" target="__blank">Kichechef,</a></li>
+                <li><a href="#" target="__blank">KicheConcept </a></li>
+              </ul>
+            </div>
+
+            <div class="list-group">
+              <h2 class="list-title">M - O -R</h2>
+              <ul>
+                <li><a href="#" target="__blank">Maison du Lit</a></li>
+                <li><a href="#" target="__blank">Mich-Gillen </a></li>
+                <li><a href="#" target="__blank">Oestreicher</a></li>
+                <li><a href="#" target="__blank">Roche Bobois</a></li>
+              </ul>
+            </div>
+
+            <div class="list-group">
+              <h2 class="list-title">T</h2>
+              <ul>
+                <li><a href="#" target="__blank">Thommessen Intérieurs </a></li>
+                <li><a href="#" target="__blank">Tousalon</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="stores-map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.0763434162886!2d6.0634100932954675!3d49.601356419026665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47954be30bb59dc5%3A0x3e72f1396b6e27d7!2s78%20Rte%20de%20Longwy%2C%208080%20Bertrange%2C%20Luxembourg!5e0!3m2!1sfr!2sci!4v1645474729456!5m2!1sfr!2sci" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="inspirations-section" class="default-section inspiration-section">
+      <div class="shapes">
+        <img src="dist/images/shape_1098.png" class="blue desktop-only" alt="">
+        <img src="dist/images/shape_1099.png" class="yellow desktop-only" alt="">
+        <img src="dist/images/shape_1437.png" class="yellow mobile-only" alt="">
+        <img src="dist/images/shape_1438.png" class="red" alt="">
+      </div>
+      <div class="mobile-social-follow">
+        <div class="label">Nous suivre</div>
+        <div class="social-icons">
+          <a href="#"><img src="dist/images/instagram.png" alt=""></a>
+          <a href="#"><img src="dist/images/facebbok.png" alt=""></a>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="title">S’inspirer, craquer, meubler !</h2>
+        <div class="elfsight-app-6a5fb8cb-5f22-4e1c-bd87-78ad86af2856"></div>
+        <!-- <div class="inspiration-images"> -->
+          
+          <!-- <div class="">
+            <img src="dist/images/nathan-oakley-ueJ2oJeEK-U-unsplash.png" alt="">
+          </div>
+          <div class="">
+            <img src="images_png/spacejoy-sh6Aj176NAQ-unsplash_.png" alt="">
+          </div>
+          <div>
+            <img src="images_png/nathan-oakley-4pD1nPrt36Y-unsp.png" alt="">
+          </div>
+          <div>
+            <img src="images_png/spacejoy-vPKNB_gc23Q-unsplash.png" alt="">
+          </div>
+          <div>
+            <img src="images_png/nathan-oakley-4pD1nPrt36Y-unsp.png" alt="">
+          </div>
+          <div>
+            <img src="images_png/nathan-oakley-4pD1nPrt36Y-unsp.png" alt="">
+          </div>
+          <div>
+            <img src="images_png/spacejoy-IH7wPsjwomc-unsplash.png" alt="">
+          </div> -->
+        <!-- </div> -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="shapes">
+        <!-- <div class="desktop-only pinkPurple"> -->
+          <img class="desktop-only pink" src="dist/images/shape_1389.png" alt="">
+          <img class="desktop-only purple" src="dist/images/shape_1390.png" alt="">
+        <!-- </div> -->
+
+        <img class="red" src="dist/images/mobile_shape_1405.png" alt="">
+        <img class="blue" src="dist/images/mobile_shape_1392.png" alt="">
+        <img class="yellow" src="dist/images/mobile_shape_1445.png" alt="">
+      </div>
+      <section>
+        <div class="container">
+          <div class="footer-container">
+            <div class="footer-logo-container">
+              <img src="dist/images/logo-footer.png" alt="Logo footer">
+            </div>
+
+            <div class="footer-description-container">
+              <div class="description">
+                <p>Fédération Luxembourgeoise de l’Ameublement (FEDAM)</p>
+                <p>7, rue Alcide de Gasperi | L-1615 Luxembourg <br/> BP 482 | L-2014 Luxembourg</p>
+              </div>
+              <div class="contacts">
+                <ul class="list-unstyled">
+                  <li>Tél: +352 43 94 44 1 | Fax: 43 94 50</li>
+                  <li> E-mail: <a href="mailto:info@fedam.lu">info@fedam.lu</a></li>
+                  <li class="mt-5"><a href="http://fedam.lu" class="text-underlined">fedam.lu</a></li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+          <div class="copyright">
+            <p>Powered by © wait agency</p>
+            <p>Privacy Policy, Terms of Service, UGC Terms of Service</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <div class="scroll-top-button">
+      Aller en haut
     </div>
 
-    <div class="section2">
-      <img src="images/Groupe_ de_masques 1.png" alt="" class="image-8" />
-      <img src="images/Tracé 1080.png" alt="" class="image-9" />
-      <img src="images/Tracé 1082.png" alt="" class="im_1" />
-      <img src="images/Tracé 1081.png" alt="" class="im_2" />
-    </div>
+    <!-- <div class="theme-setting">
+      <button class="close">&times;</button>
+      <button type="button" class="button button-primary with-counter">Avec Compteur</button>
+      <button type="button" class="button button-secondary without-counter">Sans Compteur</button>
+    </div> -->
 
-    <div class="p-items">
-      <p>
-        Le Miwwelfestival (Festival du Meuble) c’est un moment incontournable
-        dans le paysage luxembourgeois. Orchestré 2 fois par an, au printemps et
-        à l’automne par les professionnels de l’ameublement, il permet de
-        bénéficier de promotions exceptionnelles allant de 30 à 50% sur de
-        nombreux articles auprès des magasins participants.
-      </p>
-
-      <p id="p2">
-        C’est l’occasion rêvée pour relooker son intérieur en faisant de bonnes
-        affaires.
-      </p>
-      <br />
-      <p id="p3">
-        Le Miwwelfestival, c’est aussi l’occasion de rencontrer des commerçants
-        passionnés qui vous font découvrir le « Home Style in Luxembourg ». Des
-        articles d’ameublement de qualité, des marques renommées, et surtout le
-        conseil de professionnels avisés et engagés.<br /><br />
-        L’édition de printemps du Miwwelfestival a lieu du
-      </p>
-      <br />
-      <p id="p4">samedi 12 au dimanche 20 mars inclus.</p>
-    </div>
-
-    <div class="image-fond2">
-      <img src="images/Tracé 1077.png" alt="" class="im_1077" />
-    </div>
+    <script src="dist/js/map-script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXLkzmlhbqfE987AJF3hUh1r7iaSadyTo&map_ids=85fc3627aa19ce6&callback=initMap"></script>
+    <script src="dist/js/countown-timer.js"></script>
+    <script src="https://apps.elfsight.com/p/platform.js"></script>
+    <script src="dist/js/app.js"></script>
   </body>
 </html>
