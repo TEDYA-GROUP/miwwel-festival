@@ -24,7 +24,7 @@ const countDownClock = (number = 100, format = 'seconds') => {
 
   function timer(seconds) {
     const now = Date.now();
-    const then = now + seconds * 1000;
+    const then = new Date('2022-03-12T00:00:00')
 
     countdown = setInterval(() => {
       const secondsLeft = Math.round((then - Date.now()) / 1000);
