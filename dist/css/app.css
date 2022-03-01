@@ -232,7 +232,7 @@
   left: -10px;
   min-width: 100px;
   padding: 5px 10px;
-  background-color: #e2e2e2;
+  background-color: #fff;
 }
 .dropdown-list.show .dropdown-list-items > * {
   cursor: pointer;
@@ -799,6 +799,11 @@ progress {
 }
 @media screen and (min-width: 375px) {
   .mobile-menu .shape-image {
+    bottom: 10px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .mobile-menu .shape-image {
     bottom: 120px;
   }
 }
@@ -807,6 +812,12 @@ progress {
   left: 36px;
 }
 @media screen and (min-width: 375px) {
+  .mobile-menu .green {
+    bottom: 145px;
+    left: 22px;
+  }
+}
+@media screen and (min-width: 400px) {
   .mobile-menu .green {
     bottom: 180px;
     left: 60px;
@@ -839,10 +850,31 @@ progress {
   overflow-x: clip;
   height: 55vh;
 }
+@media screen and (min-width: 512px) {
+  .home-banner {
+    background-size: cover;
+    background-position: 0px -156px;
+  }
+}
 @media screen and (min-width: 576px) {
   .home-banner {
     background-size: cover;
     background-position: 0px -228px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .home-banner {
+    background-position: 0px -271px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .home-banner {
+    background-position: 0px -302px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home-banner {
+    background-position: 0px -401px;
   }
 }
 @media screen and (min-width: 1366px) {
@@ -867,6 +899,8 @@ progress {
 @media screen and (min-width: 1366px) {
   .home-banner:before {
     background-image: url("../images/desktop-banner-shape-mask.png");
+    background-repeat: no-repeat;
+    background-position: -20px -7px;
   }
 }
 .home-banner:after {
@@ -902,13 +936,14 @@ progress {
   border-right: 100vw solid #fff;
   border-bottom: 4px solid #fff;
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   z-index: 3;
 }
 @media screen and (min-width: 1366px) {
   .home-banner > .shape:before {
     border-top: 150px solid transparent;
     border-right: 99vw solid #fff;
+    bottom: -1px;
   }
 }
 .home-banner .desktop-shaddow {
@@ -916,10 +951,15 @@ progress {
 }
 @media screen and (min-width: 1366px) {
   .home-banner .desktop-shaddow {
-    display: inline-block;
+    display: none !important;
     position: absolute;
     bottom: -39px;
     right: -32px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .home-banner .desktop-shaddow {
+    display: none !important;
   }
 }
 .home-banner .container {
@@ -1252,7 +1292,7 @@ progress {
 @media screen and (min-width: 1366px) {
   .about-event .about-section-container .right-side .shapes img.blue {
     width: 133px;
-    bottom: 335px;
+    bottom: 398px;
     right: unset;
     left: -81%;
   }
@@ -1297,6 +1337,9 @@ progress {
   height: 125px;
   background: #fff;
   background: -webkit-linear-gradient(275deg, #fff 50%, transparent 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 993px) {
   .stores-presents .stores-title {
@@ -1304,6 +1347,11 @@ progress {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .stores-presents .stores-title {
+    top: -1px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1323,12 +1371,11 @@ progress {
 .stores-presents .stores-desscription {
   width: 95%;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 0px;
 }
 @media screen and (min-width: 1366px) {
   .stores-presents .stores-desscription {
     width: 65%;
-    padding: 100px 0;
     line-height: 1.2em;
   }
 }
@@ -1373,12 +1420,15 @@ progress {
   .stores-presents .stores-map-container {
     position: static;
     min-height: 480px;
+    margin: 0 auto;
+    max-width: 1320px;
+    overflow: clip auto;
   }
 }
 .stores-presents .stores-map-container iframe {
   width: 100% !important;
 }
-.stores-presents .stores-map-container:after {
+.stores-presents:after {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -1387,12 +1437,6 @@ progress {
   border-bottom: 15px solid #fff;
   border-top: 50px solid transparent;
 }
-@media screen and (min-width: 1366px) {
-  .stores-presents .stores-map-container:after {
-    display: none;
-  }
-}
-
 /* end of stores section */
 /* Inspiration section */
 .inspiration-section {
