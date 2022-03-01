@@ -1297,6 +1297,9 @@ progress {
   height: 125px;
   background: #fff;
   background: -webkit-linear-gradient(275deg, #fff 50%, transparent 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 993px) {
   .stores-presents .stores-title {

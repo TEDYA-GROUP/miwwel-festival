@@ -970,61 +970,10 @@ progress {
 .stores-presents {
   position: relative;
   text-align: center;
-  // margin-top: 20px;
   padding-bottom: 0px;
   overflow-x: clip;
-  // background-image: url('../images/desktop-store-bg.png');
-  // background-position: 0 center;
   background-repeat: no-repeat;
   background-color: #31B6B3;
-  @media screen and (min-width: 768px) {
-    // background-size: cover;
-  }
-  @media screen and (min-width: 1366px) {
-    // margin-top: 80px;
-  }
-  // &:before {
-  //   content: '';
-  //   border-top: 0 solid #FFF;
-  //   border-left: 100vw solid #fff;
-  //   border-bottom: 150px solid transparent;
-  //   height: 150px;
-  //   position: absolute;
-  //   top: -2px;
-  //   left: 0;
-  //   // @media screen and (min-width: 1366px) {
-  //   //   top: 83px;
-  //   //   display: none;
-  //   // }
-  // }
-
-  // .stores-background-container {
-  //   position: relative;
-  //   background-color: #31B6B3;
-  //   padding: 10px 0 0 0;
-  //   @media screen and (min-width: 1366px) {
-  //     background-color: initial;
-  //     // background-image: url('../images/desktop-store-bg.png');
-  //     .container, .stores-map-container {
-  //       width: 1024px;
-  //       margin: 0 auto;
-  //     }
-  //     &:after {
-  //       content: "";
-  //       position: absolute;
-  //       bottom: -2px;
-  //       left: 0;
-  //       border-left: 100vw solid #fff;
-  //       border-bottom: 15px solid #fff;
-  //       border-top: 50px solid transparent;
-  //       z-index: 1;
-  //     }
-  //   }
-  // }
-  .stores-background-container {
-    
-  }
-
   .stores-title {
     font-family: dejanire-headline;
     font-weight: 300;
@@ -1035,6 +984,9 @@ progress {
     height: 125px;
     background: #fff;
     background: -webkit-linear-gradient(275deg, #fff 50%, transparent 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media screen and (min-width: 993px) {
       max-width: 100%;
       display: flex;
