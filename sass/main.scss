@@ -547,15 +547,23 @@ progress {
   .shape-image {
     bottom: 73px;
     @media screen and (min-width: 375px) {
-      bottom: 120px
+      bottom: 10px;
+    }
+    @media screen and (min-width: 400px) {
+      bottom: 120px;
     }
   }
   .green {
     bottom: 157px;
     left: 36px;
+    
     @media screen and (min-width: 375px) {
+      bottom: 145px;
+      left: 22px;
+    }
+    @media screen and (min-width: 400px) {
       bottom: 180px;
-      left: 60px
+      left: 60px;
     }
   }
   .purple {
@@ -587,12 +595,22 @@ progress {
   background-size: cover;
   overflow-x: clip;
   height: 55vh;
+  @media screen and (min-width: 512px) {
+    background-size: cover;
+    background-position: 0px -156px;
+  }
   @media screen and (min-width: 576px) {
     background-size: cover;
     background-position: 0px -228px;
   }
-  @media screen and (min-width: 767px) {
-
+  @media screen and (min-width: 769px) {
+    background-position: 0px -271px;
+  }
+  @media screen and (min-width: 993px) {
+    background-position: 0px -302px;
+  }
+  @media screen and (min-width: 1024px) {
+    background-position: 0px -401px;
   }
   @media screen and (min-width: 1366px) {
     background-image: url('../images/desktop-home-bg.png');
@@ -613,6 +631,8 @@ progress {
     background-position: 0px -7px;
     @media screen and (min-width: 1366px) {
       background-image: url('../images/desktop-banner-shape-mask.png');
+      background-repeat: no-repeat;
+      background-position: -20px -7px;
     }
   }
   &:after {
@@ -643,14 +663,15 @@ progress {
       content: '';
       border-top: 50px solid transparent;
       border-right: 100vw solid #fff;
+      border-bottom: 4px solid #fff;
+      position: absolute;
+      bottom: 0px;
+      z-index: 3;
       @media screen and (min-width: 1366px) {
         border-top: 150px solid transparent;
         border-right: 99vw solid #fff;
+        bottom: -1px;
       }
-      border-bottom: 4px solid #fff;
-      position: absolute;
-      bottom: 0;
-      z-index: 3;
     }
     
     
@@ -658,10 +679,13 @@ progress {
   .desktop-shaddow {
     display: none;
     @media screen and (min-width: 1366px) {
-      display: inline-block;
+      display: none !important;
       position: absolute;
       bottom: -39px;
       right: -32px;
+    }
+    @media screen and (min-width: 1400px) {
+      display: none !important;
     }
   }
   .container {
@@ -939,7 +963,7 @@ progress {
             }
             @media screen and (min-width: 1366px) {
               width: 133px;
-              bottom: 335px;
+              bottom: 398px;
               right: unset;
               left: -81%;
             }
@@ -993,6 +1017,9 @@ progress {
       align-items: center;
       justify-content: center;
     }
+    @media screen and (min-width: 1366px) {
+      top: -1px;
+    }
     span {
       @media screen and (max-width: 992px) {
         background: -webkit-linear-gradient(282deg, #000 47%, #fff 25%);
@@ -1009,10 +1036,10 @@ progress {
   .stores-desscription {
     width: 95%;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 0px;
     @media screen and (min-width: 1366px) {
       width: 65%;
-      padding: 100px 0;
+      // padding: 0;
       line-height: 1.2em;
     }
   }
@@ -1053,21 +1080,25 @@ progress {
     @media screen and (min-width: 1366px) {
       position: static;
       min-height: 480px;
+      margin: 0 auto;
+      max-width: 1320px;
+      overflow: clip auto;
     }
     iframe {
       width: 100% !important;
     }
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      border-left: 100vw solid #fff;
-      border-bottom: 15px solid #fff;
-      border-top: 50px solid transparent;
-      @media screen and (min-width: 1366px) {
-        display: none;
-      }
+    
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    border-left: 100vw solid #fff;
+    border-bottom: 15px solid #fff;
+    border-top: 50px solid transparent;
+    @media screen and (min-width: 1366px) {
+      // display: none;
     }
   }
 }
