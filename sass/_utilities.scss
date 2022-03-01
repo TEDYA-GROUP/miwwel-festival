@@ -39,21 +39,6 @@
   align-items: center;
 }
 
-.dropdown-list {
-  position: relative;
-  .current {
-    font-size: 15px;
-    text-transform: uppercase;
-    color: var(--body-color);
-    padding-right: 5px;
-    font-weight: 900;
-  }
-  .dropdown-list-items {
-    display: none;
-    position: absolute;
-  }
-}
-
 /* Texts utilities */
 .text-center {
   text-align: center !important;

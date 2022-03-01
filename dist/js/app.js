@@ -5,7 +5,7 @@ class App {
     this.menus = document.querySelectorAll('.header .navbar-nav a')
     this.scrollTopButton = document.querySelector('.scroll-top-button')
     this.settingButtons = document.querySelectorAll('.theme-setting button')
-    
+    this.dropdowns = document.querySelectorAll('.dropdown-toggle');
   }
 
   init() {
@@ -20,6 +20,34 @@ class App {
       // add inspiration-images to instagram feed
       this.instagramFeedObserver('.elfsight-app-6a5fb8cb-5f22-4e1c-bd87-78ad86af2856')
     }
+
+    if (this.dropdowns.length > 0) [
+      this.dropdowns.forEach(item => {
+        item.addEventListener('click', (event) => {
+          event.preventDefault();
+          let parent = item.closest('.dropdown-list')
+          if (parent) {
+            if (parent.classList.contains('show')) {
+              parent.classList.remove('show')
+            } else {
+              parent.classList.add('show')
+              parent.querySelector('.dropdown-toggle').addEventListener('mouseover', () => {
+                parent.classList.add('show')
+              })
+              parent.querySelector('.dropdown-toggle').addEventListener('mouseleave', () => {
+                parent.classList.remove('show')
+              })
+              parent.querySelector('.dropdown-list-items').addEventListener('mouseover', () => {
+                parent.classList.add('show')
+              })
+              parent.querySelector('.dropdown-list-items').addEventListener('mouseleave', () => {
+                parent.classList.remove('show')
+              })
+            }
+          }
+        })
+      })
+    ]
     
     if (this.menus.length > 0) {
       this.menus.forEach(item => {
