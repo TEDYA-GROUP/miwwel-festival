@@ -1260,23 +1260,18 @@ progress {
   font-weight: 300;
   position: relative;
   z-index: 3;
-  top: 50px;
   font-size: 2.5em;
   line-height: 1em;
   height: 125px;
   background: #fff;
   background: -webkit-linear-gradient(275deg, #fff 50%, transparent 50%);
 }
-@media screen and (min-width: 600px) {
-  .stores-presents .stores-title {
-    max-width: 50%;
-    margin: 0 auto;
-    top: 0;
-  }
-}
 @media screen and (min-width: 993px) {
   .stores-presents .stores-title {
     max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 992px) {

@@ -1024,55 +1024,17 @@ progress {
     font-weight: 300;
     position: relative;
     z-index: 3;
-    top: 50px;
     font-size: 2.5em;
     line-height: 1em;
     height: 125px;
     background: #fff;
     background: -webkit-linear-gradient(275deg, #fff 50%, transparent 50%);
-    // @media screen and (min-width: 320px) {
-    //   max-width: 70%;
-    //   background: -webkit-linear-gradient(277deg, #000 52%, #fff 25%);
-    //   -webkit-background-clip: text;
-    //   -webkit-text-fill-color: transparent;
-    //   margin: 0 auto;
-    //   top: 0;
-    //   transform: translateY(20px);
-    // }
-    @media screen and (min-width: 600px) {
-      max-width: 50%;
-      // background: -webkit-linear-gradient(277deg, #000 52%, #fff 25%);
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
-      margin: 0 auto;
-      top: 0;
-      // transform: translateY(20px);
-    }
-    // @media screen and (min-width: 845px) {
-    //   font-size: 3rem;
-    //   transform: translateY(16px);
-    //   span {
-    //     background: -webkit-linear-gradient(280deg, #000 37%, #fff 25%);
-    //     -webkit-background-clip: text;
-    //     -webkit-text-fill-color: transparent;
-    //   }
-    // }
     @media screen and (min-width: 993px) {
       max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    // bottom: -97px;
-    // top: -9px;
-    // transform: translateY(-110px);
-    // @media screen and (min-width: 1366px) {
-    //   position: relative;
-    //   bottom: 10px;;
-    //   font-size: 5rem;
-    //   line-height: 1.2em;
-    //   transform: none;
-    //   background: -webkit-linear-gradient(277deg, #000 52%, #fff 25%);
-    //   -webkit-background-clip: text;
-    //   -webkit-text-fill-color: transparent;
-    // }
     span {
       @media screen and (max-width: 992px) {
         background: -webkit-linear-gradient(282deg, #000 47%, #fff 25%);
