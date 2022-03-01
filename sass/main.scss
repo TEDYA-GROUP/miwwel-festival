@@ -1026,6 +1026,11 @@ progress {
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 4em;
+    }
+    @media screen and (min-width: 1024px) {
+      top: -1px;
+      font-size: 4.5em;
     }
     @media screen and (min-width: 1366px) {
       top: -1px;
