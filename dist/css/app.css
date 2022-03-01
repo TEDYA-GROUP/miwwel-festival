@@ -1368,12 +1368,6 @@ progress {
     font-size: 4.5em;
   }
 }
-@media screen and (min-width: 1366px) {
-  .stores-presents .stores-title {
-    top: -1px;
-    font-size: 5em;
-  }
-}
 .stores-presents .stores-title span {
   background: -webkit-linear-gradient(92deg, #fff 50%, #000 50%);
   -webkit-background-clip: text;
