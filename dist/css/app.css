@@ -1139,13 +1139,18 @@ progress {
   min-height: 315px;
   margin-bottom: 30px;
   background-image: url("../images/desktop-description-shape1.png");
-  background-position: -10vw center;
+  background-position: -18vw center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 @media screen and (min-width: 395px) {
   .about-event .about-section-container .left-side {
-    margin-bottom: 0px;
+    background-position: -17vw center;
+  }
+}
+@media screen and (min-width: 412px) {
+  .about-event .about-section-container .left-side {
+    background-position: -16vw center;
   }
 }
 @media screen and (min-width: 993px) {

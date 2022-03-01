@@ -844,11 +844,14 @@ progress {
       min-height: 315px;
       margin-bottom: 30px;
       background-image: url('../images/desktop-description-shape1.png');
-      background-position: -10vw center;
+      background-position: -18vw center;
       background-size: contain;
       background-repeat: no-repeat;
       @media screen and (min-width: 395px) {
-        margin-bottom: 0px;
+        background-position: -17vw center;
+      }
+      @media screen and (min-width: 412px) {
+        background-position: -16vw center;
       }
       @media screen and (min-width: 993px) {
         width: 50%;
