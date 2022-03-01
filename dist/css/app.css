@@ -1354,9 +1354,14 @@ progress {
     top: -1px;
   }
 }
+.stores-presents .stores-title span {
+  background: -webkit-linear-gradient(92deg, #fff 50%, #000 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @media screen and (max-width: 992px) {
   .stores-presents .stores-title span {
-    background: -webkit-linear-gradient(282deg, #000 47%, #fff 25%);
+    background: -webkit-linear-gradient(275deg, #000 50%, #fff 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
