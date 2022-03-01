@@ -855,14 +855,17 @@ progress {
       }
       @media screen and (min-width: 993px) {
         width: 50%;
+        min-height: 555px;
+      }
+      @media screen and (min-width: 1024px) {
+        min-height: 585px;
       }
       @media screen and (min-width: 1366px) {
-        min-height: 555px;
+        min-height: 600px;
       }
       .main-image {
         position: absolute;
         top: -40px;
-        // left: -94px;
         left: -30%;
         width: 111%;
         @media screen and (min-width: 395px) {
@@ -888,7 +891,7 @@ progress {
           top: -40px;
         }
         @media screen and (min-width: 1366px) {
-          width: 117%;
+          width: 123%;
           left: -12vw;
           top: -175px;
         }
@@ -908,7 +911,7 @@ progress {
             @media screen and (min-width: 1366px) {
               transform: rotate(1deg);
               right: -75%;
-              bottom: 30px;
+              bottom: 173px;
             }
           }
           &.yellow {
@@ -986,7 +989,7 @@ progress {
             }
             @media screen and (min-width: 1366px) {
               width: 342px;
-              bottom: 273px;
+              bottom: 520px;
               left: unset;
               right: 10px;
             }
@@ -1206,6 +1209,7 @@ progress {
     }
     @media screen and (min-width: 1366px) {
       width: 100%;
+      font-size: 2.5rem;
     }
   }
 
