@@ -64,21 +64,6 @@
   align-items: center;
 }
 
-.dropdown-list {
-  position: relative;
-}
-.dropdown-list .current {
-  font-size: 15px;
-  text-transform: uppercase;
-  color: var(--body-color);
-  padding-right: 5px;
-  font-weight: 900;
-}
-.dropdown-list .dropdown-list-items {
-  display: none;
-  position: absolute;
-}
-
 /* Texts utilities */
 .text-center {
   text-align: center !important;
@@ -220,6 +205,45 @@
 
 .dropdown-toggle {
   cursor: pointer;
+}
+
+.dropdown-list {
+  position: relative;
+}
+.dropdown-list .current {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--body-color);
+  padding-right: 5px;
+  font-weight: 900;
+}
+.dropdown-list .dropdown-list-items {
+  display: none;
+  position: absolute;
+}
+.dropdown-list.show .dropdown-icon svg {
+  transform: rotate(180deg);
+}
+.dropdown-list.show .dropdown-list-items {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 18px;
+  left: -10px;
+  min-width: 100px;
+  padding: 5px 10px;
+  background-color: #e2e2e2;
+}
+.dropdown-list.show .dropdown-list-items > * {
+  cursor: pointer;
+}
+.dropdown-list.show .dropdown-list-items > *:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+.dropdown-list.show .dropdown-list-items > * a {
+  padding: 5px 0;
+  display: inline-block;
+  width: 100%;
 }
 
 *,
@@ -1052,6 +1076,9 @@ progress {
   position: relative;
   padding-top: 0px;
 }
+.about-event .container {
+  padding-left: 0px;
+}
 @media screen and (min-width: 993px) {
   .about-event .container {
     width: 100%;
@@ -1071,6 +1098,10 @@ progress {
   width: 100%;
   min-height: 315px;
   margin-bottom: 30px;
+  background-image: url("../images/desktop-description-shape1.png");
+  background-position: -10vw center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 @media screen and (min-width: 395px) {
   .about-event .about-section-container .left-side {
@@ -1167,6 +1198,7 @@ progress {
 .about-event .about-section-container .right-side {
   position: relative;
   padding: 0 10px;
+  padding-left: 30px;
 }
 @media screen and (min-width: 993px) {
   .about-event .about-section-container .right-side {
