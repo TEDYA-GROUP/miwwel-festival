@@ -57,7 +57,10 @@ class App {
           if (targetBloc) {
             this.scrollTo(targetBloc)
           }
-          
+          let isMobileMenu = item.closest('.mobile-menu')
+          if (isMobileMenu) {
+            isMobileMenu.closest('.menu-toggler').classList.remove('show')
+          }
         })
       })
     }
