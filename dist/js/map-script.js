@@ -54,6 +54,8 @@ function initMap() {
     ['lucien schweitzer', 49.605044542369086, 6.129590997871022, markerIcon],
     ['kicheconcept', 49.60143680029903, 6.067801697870852, markerIcon],
   ];
+  
+  let activeWIndow = null;
 
   for (let i = 0; i < markers.length; i++) {
     const currMarker = markers[i];
@@ -67,13 +69,18 @@ function initMap() {
       },
     });
 
+    
     const infowindow = new google.maps.InfoWindow({
       content: currMarker[0],
     });
 
     // affichage du nom du magasin  par clic sur le marqueur
     marker.addListener('click', () => {
-      infowindow.open(map, marker);
+      if (activeWIndow != null) {
+        activeWIndow.close();
+      }
+      infowindow.open({map, anchor: marker, shouldFocus: true});
+      activeWIndow = infowindow;
     });
   }
 }
