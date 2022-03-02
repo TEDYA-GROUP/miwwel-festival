@@ -1302,10 +1302,18 @@ progress {
     left: -81%;
   }
 }
+@media screen and (min-width: 1024px) {
+  .about-event .about-section-container .right-side .shapes img.blue {
+    width: 133px;
+    bottom: 476px;
+    right: unset;
+    left: -81%;
+  }
+}
 @media screen and (min-width: 1366px) {
   .about-event .about-section-container .right-side .shapes img.blue {
     width: 133px;
-    bottom: 471px;
+    bottom: 518px;
     right: unset;
     left: -81%;
   }
@@ -1473,6 +1481,7 @@ progress {
   .inspiration-section .shapes {
     position: relative;
     top: -97px;
+    right: -51px;
   }
 }
 .inspiration-section .shapes img {
@@ -1509,11 +1518,18 @@ progress {
   left: 0;
   top: -20px;
 }
+@media screen and (min-width: 1280px) {
+  .inspiration-section .shapes img.red {
+    left: unset;
+    right: 74px;
+    top: 5px;
+  }
+}
 @media screen and (min-width: 1366px) {
   .inspiration-section .shapes img.red {
     left: unset;
-    right: 27px;
-    top: 48px;
+    right: 74px;
+    top: 5px;
   }
 }
 .inspiration-section .mobile-social-follow {
@@ -1528,6 +1544,7 @@ progress {
 @media screen and (min-width: 1366px) {
   .inspiration-section .mobile-social-follow {
     transform: translate(-203px, -109px);
+    right: -51px;
   }
 }
 .inspiration-section .mobile-social-follow .label {
@@ -1561,6 +1578,12 @@ progress {
 @media screen and (min-width: 414) {
   .inspiration-section .title {
     font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .inspiration-section .title {
+    width: 100%;
+    font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 1366px) {
