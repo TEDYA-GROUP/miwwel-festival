@@ -796,10 +796,14 @@ progress {
 }
 .mobile-menu .shape-image {
   bottom: 73px;
+  bottom: 48px;
+  width: 250px;
+  right: -45px;
 }
 @media screen and (min-width: 375px) {
   .mobile-menu .shape-image {
-    bottom: 10px;
+    width: auto;
+    right: inherit;
   }
 }
 @media screen and (min-width: 400px) {
